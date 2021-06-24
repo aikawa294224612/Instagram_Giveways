@@ -1,5 +1,5 @@
 # Instagram_Giveways
-為了justreadwithme_抽獎，自己寫一個簡單抽獎
+為了justreadwithme_抽獎，自己寫一個簡單抽獎 (臨時要抽獎，ig更新了，所以不走爬蟲)
 
 ![Imgur](https://i.imgur.com/eVbuVPX.jpg)
 

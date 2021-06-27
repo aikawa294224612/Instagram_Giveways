@@ -32,26 +32,27 @@ def clear_repeat(lst):
     return clear_list
 
 
-html = get_html()
-tag_list = catch_tag(html)
+if __name__ == '__main__':
+    html = get_html()
+    tag_list = catch_tag(html)
 
-print("全部參加者:")
-index = 1
-for tag in tag_list:
-    name = cut_tags(tag)
-    if name not in except_id:
-        print('(', index, ')', name)
-        attendee.append(name)
-        index += 1
+    print("全部參加者:")
+    index = 1
+    for tag in tag_list:
+        name = cut_tags(tag)
+        if name not in except_id:
+            print('(', index, ')', name)
+            attendee.append(name)
+            index += 1
 
-if cant_repeat:
-    attendee = clear_repeat(attendee)
+    if cant_repeat:
+        attendee = clear_repeat(attendee)
 
-total = len(tag_list)-1
-total_except = len(except_id)-1
-total_giveway = total - total_except
-print('總參加人數:', total)
-print('不參加抽獎者:', total_except)
-print('總抽獎人數:', total_giveway)
-print("恭喜🎉✨得獎者是:")
-print(random.sample(attendee, num))
+    total = len(tag_list) - 1
+    total_except = len(except_id) - 1
+    total_giveway = total - total_except
+    print('總參加人數:', total)
+    print('不參加抽獎者:', total_except)
+    print('總抽獎人數:', total_giveway)
+    print("恭喜🎉✨得獎者是:")
+    print(random.sample(attendee, num))
